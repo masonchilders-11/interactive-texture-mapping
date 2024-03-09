@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/dat.gui@0.7.6/build/dat.gui.min.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Example</title>
+    <style>
+        body { margin: 0; }
+        canvas { display: block; }
+
+        /* Use relative units for font sizes and element dimensions */
+        .dg .c select, .dg .c input[type="text"], .dg .close-button {
+            font-size: 1vw; /* Adjusts font size based on the width of the viewport */
+            padding: 10vw; /* Padding based on viewport width for scalability */
+        }
+
+        /* Adjust the GUI container size dynamically */
+        .dg .main {
+            width: 50vw; /* Set width relative to the viewport width */
+        }
+
+        /* Responsive adjustments for larger screens */
+        @media (min-width: 768px) {
+            .dg .c select, .dg .c input[type="text"], .dg .close-button {
+                font-size: 1vw; /* Decrease font size for larger screens */
+                padding: 0.25vw; /* Adjust padding for larger screens */
+            }
+
+            .dg .main {
+                width: 50vw; /* Adjust width for larger screens */
+            }
+        }
+
+        /* Style adjustments for the custom UI controls */
+        #uiControls {
+            position: absolute;
+            top: 10px;
+            left: 100px;
+            color: white;
+            z-index: 100;
+            font-size: 2vw; /* Responsive font size */
+        }
+
+        #uiControls input[type="checkbox"] {
+            transform: scale(1.5); /* Initial scaling of checkboxes */
+        }
+
+        /* Media query for larger screens */
+        @media (min-width: 768px) {
+            #uiControls {
+                font-size: 1.5vw;
+            }
+
+            #uiControls input[type="checkbox"] {
+                transform: scale(2); /* Slightly larger scale for bigger screens */
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <!-- Three.js library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three/examples/js/controls/OrbitControls.js"></script>
+    <!-- Simplex noise library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <!-- Link to app.js file -->
+    <script src="app.js"></script>
+    <div id="uiControls" style="position: absolute; top: .1vw; left: 1.5vw; color: white; z-index: 100; font-size: 1.5vw;">
+        <input type="checkbox" id="snowToggle">
+        <label for="snowToggle">Snow</label>
+        <input type="checkbox" id="rainToggle">
+        <label for="rainToggle">Rain</label>
+    </div>
+    
+    <script>
+        // Variables to control visibility of rain and snow
+        let showSnow = false; // Initially off
+        let showRain = false; // Initially off
+
+        // Event listener for snow toggle
+        document.getElementById('snowToggle').addEventListener('change', function() {
+            showSnow = this.checked;
+        });
+
+        // Event listener for rain toggle
+        document.getElementById('rainToggle').addEventListener('change', function() {
+            showRain = this.checked;
+        });
+    </script>
+</body>
+</html>
