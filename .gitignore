@@ -1,0 +1,23 @@
+# General
+.DS_Store
+node_modules/
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+# OS generated files
+ehthumbs.db
+Thumbs.db
+DirectoryListing.xml
+
+# Editor directories and files
+.idea
+*.swp
+*.swo
+.vscode/
+
+# Video submission file
+cs 77 final pres.mov
