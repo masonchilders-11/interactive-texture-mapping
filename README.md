@@ -1,3 +1,3 @@
 # interactive-texture-mapping
 
-[![Watch the video]([http://www.youtube.com/watch?v=VIDEO_ID](https://youtu.be/gDXCcjgzn0c)https://youtu.be/gDXCcjgzn0c)
+[![Watch the video](http://img.youtube.com/vi/gDXCcjgzn0c/0.jpg)](https://youtu.be/gDXCcjgzn0c)
