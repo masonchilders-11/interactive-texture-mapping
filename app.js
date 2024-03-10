@@ -92,10 +92,8 @@ const grassMaterial = new THREE.MeshStandardMaterial({
     bumpMap: grassBumpTexture
 });
 
-const straightGreen = new THREE.MeshLambertMaterial({ color: 0x339933 }); // Green material for grass
-
 // Creating grass terrain
-let terrain = generateTerrain(4, straightGreen);
+let terrain = generateTerrain(4, grassMaterial);
 
 
 
